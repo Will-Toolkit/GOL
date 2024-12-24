@@ -16,6 +16,17 @@ class GOLController {
     stepBtn.addEventListener("click", () => {
       this.grid?.step();
     });
+
+    // Make Clear button
+    const clearBtn = document.createElement("a");
+    this.el.append(clearBtn);
+    clearBtn.classList.add("btn", "clear");
+    clearBtn.href = "javascript:;";
+    clearBtn.innerHTML = "Clear";
+
+    clearBtn.addEventListener("click", () => {
+      this.grid.clear();
+    });
   }
 
 }

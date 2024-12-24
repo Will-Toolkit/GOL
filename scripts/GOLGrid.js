@@ -59,6 +59,13 @@ class GOLGrid {
     }
   }
 
+  clear() {
+    while (this.el.lastElementChild) {
+      this.el.removeChild(this.el.lastElementChild);
+    }
+    this.init();
+  }
+
   getCell(x, y, arrayType) {
     if (!Number.isInteger(x) || !Number.isInteger(y)) {
       console.error(`getCell: x and/or y aren't integers

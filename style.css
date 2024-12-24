@@ -1,5 +1,5 @@
 body {
-  background: #445;
+  background: linear-gradient(#333346, #444466);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,6 +28,7 @@ body {
 
 .gol-controller {
   justify-content: center;
+  gap: 5px;
 }
 
 .gol-container {
@@ -56,11 +57,20 @@ body {
   aspect-ratio: 1;
   flex-grow: 1;
   width: var(--cellWidth);
-  outline: 1px solid #444;
+  outline: 1px solid #44444444;
   background: white;
   border-radius: 20%;
+  transition: all 0.1s ease-in-out;
+}
+
+.gol-grid .cell:hover {
+  background:#bbd;
+}
+
+.gol-grid .cell.active:hover {
+  background: #448;
 }
 
 .cell.active {
-  background: black;
+  background: #226;
 }
