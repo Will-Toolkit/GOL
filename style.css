@@ -1,0 +1,66 @@
+body {
+  background: #445;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.btn {
+  border: 1px solid #445;
+  text-decoration: none;
+  color: black;
+  padding: 5px 15px;
+  border-radius: 5px;
+  letter-spacing: 0.05rem;
+  transition: all 0.2s ease-in-out;
+  background: #cce;
+}
+
+.btn:hover {
+  background: #aab;
+}
+
+.gol-controller {
+  justify-content: center;
+}
+
+.gol-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.gol-grid,
+.gol-controller {
+  --cellWidth: calc(100% / var(--cellColumns));
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  background: #889;
+  border-radius: 5px;
+}
+
+.gol-grid .cell {
+  --borderWidth: 1px;
+  aspect-ratio: 1;
+  flex-grow: 1;
+  width: var(--cellWidth);
+  outline: 1px solid #444;
+  background: white;
+  border-radius: 20%;
+}
+
+.cell.active {
+  background: black;
+}
