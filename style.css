@@ -74,3 +74,32 @@ body {
 .cell.active {
   background: #226;
 }
+
+.btn.play {
+  min-width: 50px;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn.play.active {
+  background-color: #bdd;
+}
+
+.btn.play.active:hover {
+  background-color: #9bb;
+}
+
+.btn.play i {
+  aspect-ratio: 1;
+  line-height: 1;
+}
+
+.btn.play:not(.active) .fa-pause {
+  display: none;
+}
+
+.btn.play.active .fa-play {
+  display: none;
+}
